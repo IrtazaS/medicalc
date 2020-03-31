@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="HandheldFriendly" content="true">
+  <link rel="stylesheet"
+    href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+    integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"
+    integrity="sha256-AdQN98MVZs44Eq2yTwtoKufhnU+uZ7v2kXnD5vqzZVo=" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"
+    integrity="sha256-kIiM3UOTsgRqR7ellGKPpjPN7/z88uz28qIiwk/cVsc=" crossorigin="anonymous"></script>  
+
+    <script src="rolldate.min.js"></script>
+
+  <link rel="stylesheet" href="index.css">
+  <script src="main.js"></script>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker-standalone.css"
+    integrity="sha256-Wp+btsydCDIy6IGRmYyVIKnSs6HkIvipYyFnEMdc5lY=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  
+  <title>Medicalc</title>
+  <style type="text/css">
+  </style>
+
+
+</head>
+
+<body>
+  <div class="bmd-layout-container bmd-drawer-f-l bmd-drawer-overlay">
+    <header class="bmd-layout-header">
+<nav class="navbar navbar-dark bg-primary">
+  <span class="navbar-brand mb-0 h1">Tumor growth calculator</span>
+</nav>
+    </header>
+
+
+  <main class="bmd-layout-content">
+  <div class="container-fluid shadow-lg mb-5 bg-white rounded" id="main-container">
+    <div class="row" id="ct_before_div">
+      <div class="col-lg">
+        
+        <div class="alert alert-info" role="alert">
+          CT immediately before immunotherapy
+        </div>
+        <input readonly type="text" id="example" placeholder="Select date...">
+        
+        <div>
+          <fieldset class="form-group">
+            <label for="exampleInputEmail1" class="bmd-label-floating">Enter volume (ml)</label>
+            <input type="number" class="form-control" id="input1">
+          </fieldset>
+
+        </div>
+      </div>
+    </div>
+    <div class="row" id="ct_after_div">
+      <div class="col-lg">
+        <p></p>
+        <div class="alert alert-info" role="alert">
+          CT after immunotherapy
+        </div>
+        <input readonly type="text" id="example1" placeholder="Select date...">
+        
+        <div>
+          <fieldset class="form-group">
+            <label for="exampleInputEmail1" class="bmd-label-floating">Enter volume (ml)</label>
+            <input type="number" class="form-control" id="input2">
+          </fieldset>
+
+        </div>
+      </div>
+    </div>
+    <div class="row" style="text-align: center; display: block; padding-top: 40px;">
+      
+      <span class="btn-group-lg">
+        <button type="button" class="btn btn-danger bmd-btn-fab bmd-btn-fab-sm">
+          <span class="material-icons">
+            clear
+            </span>
+        </button>
+        <button type="button" class="btn btn-success bmd-btn-fab" id="buttoncalc">
+          <span class="material-icons">
+            forward
+            </span>
+        </button>
+      </span>
+    </div>
+<h3 id="abs_result"></h3>
+
+
+  </div>
+</main>
+<footer><p style="font-size:10px;">&copy; Irtaza Syed</p></footer>
+</div>
+</body>
+
+</html>

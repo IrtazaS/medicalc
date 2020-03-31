@@ -1,0 +1,49 @@
+body{
+ background: white;   
+}
+
+
+.value_inputs{
+    
+}
+
+.row{
+
+
+    
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: lightgray;
+    text-align: center;
+    z-index: 1;
+  }
+
+.inset_shadow{
+    
+}
+
+.custom_labels{
+
+}
+
+#buttoncalc{
+    background: #4CAF50;
+}
+#main-container{
+    width: auto;
+    padding: 50px;
+}
+
+#ct_before_div{
+
+}
+
+#ct_after_div{
+    
+
+}
