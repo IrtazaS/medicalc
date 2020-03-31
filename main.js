@@ -46,12 +46,19 @@ $(function () {
     const dateCurrentFinal = new Date(dateCurrent);
     const diffTime = Math.abs(dateCurrentFinal - dateInitFinal);
     console.log(diffTime);
-    if( !$('#volumeInit').val() || !$('#volumeCurrent').val() || !$('#dateInit').val() || !$('#dateCurrent').val() || diffTime == 0) {
+    if( !$('#volumeInit').val() || !$('#volumeCurrent').val() || !$('#dateInit').val() || !$('#dateCurrent').val() ) {
       Swal.fire({
         icon: 'error',
         text: 'Please fill all fields!',
       })
-}
+    }
+      else if(diffTime == 0){
+        Swal.fire({
+          icon: 'error',
+          text: 'Please choose different dates!',
+        })
+      }
+
 else{
 
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
