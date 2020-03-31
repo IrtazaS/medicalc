@@ -42,17 +42,18 @@ $(function () {
 
 
   $('#buttoncalc').on('click', function (event) {
-    if( !$('#volumeInit').val() || !$('#volumeCurrent').val() || !$('#dateInit').val() || !$('#dateCurrent').val()) {
+    const dateInitFinal = new Date(dateInit);
+    const dateCurrentFinal = new Date(dateCurrent);
+    const diffTime = Math.abs(dateCurrentFinal - dateInitFinal);
+    console.log(diffTime);
+    if( !$('#volumeInit').val() || !$('#volumeCurrent').val() || !$('#dateInit').val() || !$('#dateCurrent').val() || diffTime == 0) {
       Swal.fire({
         icon: 'error',
         text: 'Please fill all fields!',
       })
 }
 else{
-    const dateInitFinal = new Date(dateInit);
-    const dateCurrentFinal = new Date(dateCurrent);
-    const diffTime = Math.abs(dateCurrentFinal - dateInitFinal);
-    console.log(diffTime);
+
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
     const input1 = $("#volumeInit").val()
     const input2 = $("#volumeCurrent").val()
